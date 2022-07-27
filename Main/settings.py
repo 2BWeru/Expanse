@@ -16,6 +16,7 @@ import django_heroku
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+from decouple import config,Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5@$)rt!t+=nli$pw6zp%&6hra_i-!1npe=e!3)ae8*s!c0-6yv'
+SECRET_KEY = config('SECRET_KEY')
+# SECRET_KEY = 'django-insecure-5@$)rt!t+=nli$pw6zp%&6hra_i-!1npe=e!3)ae8*s!c0-6yv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
